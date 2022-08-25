@@ -27,6 +27,6 @@ class Country extends Model
         // 4 FK del modelo a relacionar en el pivote
 
         return $this->belongsToMany(Language::class, 'country_languages', 
-        'country_id', 'language_id');
+        'country_id', 'language_id') ->withPivot('official');
     }
 }
